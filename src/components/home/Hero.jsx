@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="p-4">
+    <div>
       <Image
         src="/assets/hero/poster.svg"
         alt="hero"

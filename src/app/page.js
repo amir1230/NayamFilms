@@ -1,9 +1,13 @@
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/home/Hero";
+import Portfolio from "@/components/home/Portfolio";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <div className="p-4 flex flex-col gap-12">
+        <Hero />
+        <Portfolio />
+      </div>
     </>
   );
 }
