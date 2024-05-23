@@ -32,7 +32,7 @@ const Navbar = () => {
         height={62}
         className="object-cover"
       />
-      <div className="flex flex-row items-center max-md:hidden">
+      <div className="flex flex-row items-center max-lg:hidden">
         {navData.map((item, index) => (
           <>
             <Image
