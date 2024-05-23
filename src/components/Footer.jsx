@@ -31,7 +31,7 @@ const addressIconData = [
 const Footer = () => {
   return (
     <div className="bg-black py-10 px-20 w-full mt-24">
-      <div className="flex flex-row items-start justify-between">
+      <div className="flex flex-row items-start justify-between max-md:flex-wrap">
         <div className="flex flex-col">
           <Image
             src="/assets/logo.svg"
