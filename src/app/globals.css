@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "google-sans";
+  src: url("/fonts/ProductSans-Regular.ttf") format("truetype");
+}
+
 *{
   margin:0px;
   padding:px;
@@ -9,4 +14,5 @@
 body{
   background-color: #171616;
   color:white;
+  font-family: "google-sans",sans-serif;
 }
