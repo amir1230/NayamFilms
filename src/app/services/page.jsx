@@ -112,7 +112,7 @@ const Services = () => {
       </p>
       <div className="flex flex-row items-start justify-center flex-wrap gap-20 my-24">
         {cardsData.map((item) => {
-          return <CardComp data={item} />;
+          return <CardComp key={item.title} data={item} />;
         })}
       </div>
       <div className="flex flex-col items-center max-md:w-[90%] md:w-[80%]">
