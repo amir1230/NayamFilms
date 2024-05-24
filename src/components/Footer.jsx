@@ -50,6 +50,7 @@ const Footer = () => {
               return (
                 <>
                   <Image
+                    key={item.value}
                     src={item.src}
                     alt="social-icon"
                     width={40}
@@ -72,7 +73,10 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-4 mt-4">
             {addressIconData.map((item) => {
               return (
-                <div className="flex flex-row items-center gap-4">
+                <div
+                  key={item.value}
+                  className="flex flex-row items-center gap-4"
+                >
                   <Image
                     src={item.src}
                     alt="icon"
