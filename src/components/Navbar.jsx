@@ -18,7 +18,7 @@ const navData = [
   {
     name: "Portfolio",
     src: "/assets/navbar/portfolio.svg",
-    link: "/portfolio",
+    link: "/about",
   },
   {
     name: "News & Events",
