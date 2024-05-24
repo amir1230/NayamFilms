@@ -1,6 +1,6 @@
-import ContactUs from "@/components/home/ContactUs";
-import Hero from "@/components/home/Hero";
-import Portfolio from "@/components/home/Portfolio";
+import ContactUs from "../components/home/ContactUs";
+import Hero from "../components/home/Hero.jsx";
+import Portfolio from "../components/home/Portfolio.jsx";
 
 export default function Home() {
   return (

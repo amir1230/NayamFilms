@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { DrawerComp } from "./Drawer";
 import { Columns3 } from "lucide-react";
@@ -7,25 +8,31 @@ const navData = [
   {
     name: "Home",
     src: "/assets/navbar/home.svg",
+    link: "/",
   },
   {
     name: "Service",
     src: "/assets/navbar/service.svg",
+    link: "/services",
   },
   {
     name: "Portfolio",
     src: "/assets/navbar/portfolio.svg",
+    link: "/about",
   },
   {
     name: "News & Events",
     src: "/assets/navbar/news.svg",
+    link: "/news",
   },
   {
     name: "Contact",
     src: "/assets/navbar/contact.svg",
+    link: "/contact",
   },
 ];
 const Navbar = () => {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -35,6 +42,9 @@ const Navbar = () => {
             {navData.map((item, index) => (
               <>
                 <Image
+                  onClick={() => {
+                    router.push(item.link);
+                  }}
                   key={item.name}
                   src={item.src}
                   alt={item.name}
@@ -84,6 +94,9 @@ const Navbar = () => {
             <>
               <Image
                 key={item.name}
+                onClick={() => {
+                  router.push(item.link);
+                }}
                 src={item.src}
                 alt={item.name}
                 width={
