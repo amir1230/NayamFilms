@@ -71,12 +71,14 @@ const Footer = () => {
             className="object-cover -ms-2"
           />
           <div className="flex flex-col items-start gap-4 mt-4">
-            {addressIconData.map((item) => {
+            {addressIconData.map((item, index) => {
               return (
+
                 <div
                   key={item.value}
                   className="flex flex-row items-center gap-4"
                 >
+
                   <Image
                     src={item.src}
                     alt="icon"
