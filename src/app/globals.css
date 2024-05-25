@@ -16,3 +16,10 @@ body{
   color:white !important;
   font-family: "google-sans",sans-serif;
 }
+input,textarea{
+  background-color: #171616 !important;
+    color: white !important;
+    border: 2px solid #F9C409;
+    padding: 15px;
+    border-radius: 10px;
+}
