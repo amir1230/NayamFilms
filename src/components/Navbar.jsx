@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { DrawerComp } from "./Drawer";
-import { Columns3 } from "lucide-react";
+import { Columns3, X } from "lucide-react";
 const navData = [
   {
     name: "Home",
@@ -38,46 +38,56 @@ const Navbar = () => {
     <>
       {open && (
         <DrawerComp open={open} setOpen={setOpen} title="Main menu">
-          <div className="flex flex-col items-start gap-3">
-            {navData.map((item, index) => (
-              <>
-                <Image
-                  onClick={() => {
-                    router.push(item.link);
-                  }}
-                  key={item.name}
-                  src={item.src}
-                  alt={item.name}
-                  width={
-                    index === 0
-                      ? 79
-                      : index === 1
-                      ? 118
-                      : index === 2
-                      ? 118
-                      : index === 3
-                      ? 171
-                      : index === 4
-                      ? 118
-                      : 100
-                  }
-                  height={
-                    index === 0
-                      ? 39
-                      : index === 1
-                      ? 39
-                      : index === 2
-                      ? 39
-                      : index === 3
-                      ? 39
-                      : index === 4
-                      ? 39
-                      : 100
-                  }
-                  className="object-fill cursor-pointer"
-                />
-              </>
-            ))}
+          <div className="relative">
+            <div className="flex flex-row items-center justify-end">
+              <X
+                onClick={() => {
+                  setOpen(false);
+                }}
+                className="text-white w-7 h-7"
+              />
+            </div>
+            <div className="flex flex-col items-start gap-3">
+              {navData.map((item, index) => (
+                <>
+                  <Image
+                    onClick={() => {
+                      router.push(item.link);
+                    }}
+                    key={item.name}
+                    src={item.src}
+                    alt={item.name}
+                    width={
+                      index === 0
+                        ? 79
+                        : index === 1
+                        ? 118
+                        : index === 2
+                        ? 118
+                        : index === 3
+                        ? 171
+                        : index === 4
+                        ? 118
+                        : 100
+                    }
+                    height={
+                      index === 0
+                        ? 39
+                        : index === 1
+                        ? 39
+                        : index === 2
+                        ? 39
+                        : index === 3
+                        ? 39
+                        : index === 4
+                        ? 39
+                        : 100
+                    }
+                    className="object-fill cursor-pointer"
+                  />
+                </>
+              ))}
+            </div>
           </div>
         </DrawerComp>
       )}
