@@ -19,7 +19,7 @@ const CarouselSection = () => {
   };
   return (
     <div>
-      <div className="flex items-center justify-between px-7">
+      <div className="flex items-center justify-between px-7 max-md:px-0 max-md:flex-wrap max-md:justify-end">
         <Image
           src="/assets/upcoming/upcoming-movies.svg"
           alt="upcoming movies"

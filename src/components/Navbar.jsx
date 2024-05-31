@@ -65,8 +65,6 @@ const Navbar = () => {
                         : index === 2
                         ? 118
                         : index === 3
-                        ? 171
-                        : index === 4
                         ? 118
                         : 100
                     }
@@ -78,8 +76,6 @@ const Navbar = () => {
                         : index === 2
                         ? 39
                         : index === 3
-                        ? 39
-                        : index === 4
                         ? 39
                         : 100
                     }
