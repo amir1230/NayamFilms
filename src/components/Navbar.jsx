@@ -20,11 +20,11 @@ const navData = [
     src: "/assets/navbar/portfolio.svg",
     link: "/about",
   },
-  {
-    name: "News & Events",
-    src: "/assets/navbar/news.svg",
-    link: "/news",
-  },
+  // {
+  //   name: "News & Events",
+  //   src: "/assets/navbar/news.svg",
+  //   link: "/news",
+  // },
   {
     name: "Contact",
     src: "/assets/navbar/contact.svg",
@@ -117,8 +117,6 @@ const Navbar = () => {
                     : index === 2
                     ? 118
                     : index === 3
-                    ? 171
-                    : index === 4
                     ? 118
                     : 100
                 }
@@ -130,8 +128,6 @@ const Navbar = () => {
                     : index === 2
                     ? 39
                     : index === 3
-                    ? 39
-                    : index === 4
                     ? 39
                     : 100
                 }
