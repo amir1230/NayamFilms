@@ -30,7 +30,7 @@ const addressIconData = [
 ];
 const Footer = () => {
   return (
-    <div className="bg-black py-10 px-20 w-full mt-24">
+    <div className="bg-black py-10 px-20 w-full mt-24 max-md:px-5">
       <div className="flex flex-row items-start justify-between max-md:flex-wrap">
         <div className="flex flex-col">
           <Image
@@ -73,12 +73,10 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-4 mt-4">
             {addressIconData.map((item, index) => {
               return (
-
                 <div
                   key={item.value}
                   className="flex flex-row items-center gap-4"
                 >
-
                   <Image
                     src={item.src}
                     alt="icon"
