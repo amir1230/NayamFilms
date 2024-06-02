@@ -26,6 +26,7 @@ query {
         url
       }
       name
+      duration
     }
   }
 
