@@ -4,7 +4,10 @@ import Image from "next/image";
 import React, { forwardRef } from "react";
 const Card = ({ data }) => {
   return (
-    <div className="w-[180px] flex flex-col items-start gap-2">
+    <div
+      key={data?.duration}
+      className="w-[180px] flex flex-col items-start gap-2"
+    >
       <Image
         src={data?.poster?.url || "/assets/posters/avenger.svg"}
         alt="avenger"
@@ -48,13 +51,13 @@ const Carousel = forwardRef((props, ref) => {
     >
       {props?.data?.map((val) => {
         return (
-          <div>
-            <Card key={val} data={val} />
+          <div key={val}>
+            <Card data={val} />
           </div>
         );
       })}
     </div>
   );
 });
-
+Carousel.displayName = "Carousel";
 export default Carousel;
