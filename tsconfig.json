@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/gqloperations/get-home-query.js", "src/service/client.js"  ],
   "exclude": [
     "node_modules"
   ]

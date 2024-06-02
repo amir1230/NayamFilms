@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Carousel from "./Carousel";
 import Image from "next/image";
 
-const CarouselSection = () => {
+const CarouselSection = ({ data }) => {
   const scrollContainerRef = useRef(null);
 
   const scrollLeft = () => {
@@ -46,7 +46,7 @@ const CarouselSection = () => {
           />
         </div>
       </div>
-      <Carousel ref={scrollContainerRef} />
+      <Carousel ref={scrollContainerRef} data={data} />
     </div>
   );
 };

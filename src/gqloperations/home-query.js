@@ -13,6 +13,10 @@ query {
     }
   }
 }
+}
+`;
+export const CAROUSEL_QUERY = `
+query {
   carouselCollection{
     items{
       rating
@@ -22,6 +26,7 @@ query {
         url
       }
       name
+      duration
     }
   }
 
