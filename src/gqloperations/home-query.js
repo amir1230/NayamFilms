@@ -13,6 +13,10 @@ query {
     }
   }
 }
+}
+`;
+export const CAROUSEL_QUERY = `
+query {
   carouselCollection{
     items{
       rating
