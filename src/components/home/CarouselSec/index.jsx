@@ -1,10 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
 import Image from "next/image";
+import { LoadingComp } from "../../Loading";
 
 const CarouselSection = ({ data }) => {
   const scrollContainerRef = useRef(null);
+  const [isDelayedLoading, setIsDelayedLoading] = useState(true);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -17,6 +19,16 @@ const CarouselSection = ({ data }) => {
       scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsDelayedLoading(false);
+    }, 2100);
+
+    return () => clearTimeout(timer);
+  }, []);
+  if (isDelayedLoading) return <LoadingComp />;
+
   return (
     <div>
       <div className="flex items-center justify-between px-7 max-md:px-0 max-md:flex-wrap max-md:justify-end">
