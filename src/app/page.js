@@ -4,7 +4,7 @@ import Hero from "../components/home/Hero.jsx";
 import Portfolio from "../components/home/Portfolio.jsx";
 import CarouselSection from "../components/home/CarouselSec/index.jsx";
 import { useCarouselData, useHomeData } from "../actions/queries.js";
-
+import { LoadingComp } from "../components/Loading";
 export default function Home() {
   const {
     data: homeData,
@@ -16,8 +16,8 @@ export default function Home() {
     isLoading: carouselLoading,
     isError: carouselError,
   } = useCarouselData();
-  console.log("Carousel data is ", carouselData);
-  if (homeLoading || carouselLoading) return <p>Loading...</p>;
+
+  if (homeLoading || carouselLoading) return <LoadingComp />;
   return (
     <>
       <div className="p-4 flex flex-col gap-12">

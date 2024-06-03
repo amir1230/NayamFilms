@@ -14,9 +14,11 @@ const Portfolio = ({ data }) => {
         className="object-cover"
       />
       <p className="w-[653px] text-center max-md:w-full">
-        nayam ipsum dolor sit amet consectetur. Interdum cursus ut morbi
-        malesuadlorem odio enim. Imperdiet mauris iaculis velit mauris.
-        Consequat quam neque maecenas nisi odio sed auctor etiam morbi.
+        Nayam Films, with bases in Islamabad, Riyadh, and Dubai, offers
+        comprehensive production and rental services. Our expertise spans the
+        creation of feature films, TV commercials, corporate films,
+        documentaries, branded entertainment, photo-shoots, event coverage, TV
+        shows and animations.
       </p>
       <div className="flex flex-row items-center justify-center flex-wrap">
         <div className="flex flex-col items-center justify-start gap-3 flex-wrap mt-5 md:h-[800px]">
