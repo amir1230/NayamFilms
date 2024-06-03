@@ -20,8 +20,8 @@ const Portfolio = ({ data }) => {
         documentaries, branded entertainment, photo-shoots, event coverage, TV
         shows and animations.
       </p>
-      <div className="flex flex-row items-center justify-center flex-wrap">
-        <div className="flex flex-col items-center justify-start gap-3 flex-wrap mt-5 md:h-[800px]">
+      <div className="flex flex-row items-center justify-center flex-wrap max-md:w-full">
+        <div className="flex flex-col items-center justify-start gap-3 flex-wrap mt-5 md:h-[800px] max-md:gap-5 max-md:w-full">
           {data?.slice(cursor, cursor + 8)?.map((val) => {
             return (
               <Image
@@ -30,7 +30,7 @@ const Portfolio = ({ data }) => {
                 alt="portfolio"
                 width={324}
                 height={100}
-                className="object-contain w-auto h-auto"
+                className="object-contain w-auto h-auto max-md:w-full max-md:object-cover max-md:h-full"
               />
             );
           })}
