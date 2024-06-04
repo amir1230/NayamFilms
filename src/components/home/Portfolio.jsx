@@ -37,7 +37,7 @@ const Portfolio = ({ data }) => {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        {data?.length <= cursor + 8 && (
+        {data?.length < cursor + 8 && (
           <Button
             onClick={() => {
               setCursor(cursor >= 8 ? cursor - 8 : cursor);
