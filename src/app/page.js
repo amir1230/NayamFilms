@@ -5,6 +5,7 @@ import Portfolio from "../components/home/Portfolio.jsx";
 import CarouselSection from "../components/home/CarouselSec/index.jsx";
 import { useCarouselData, useHomeData } from "../actions/queries.js";
 import { LoadingComp } from "../components/Loading";
+import NewsAndEvents from "../components/home/News";
 export default function Home() {
   const {
     data: homeData,
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="p-4 flex flex-col gap-12">
         <Hero data={homeData && homeData[0]?.hero} />
         <CarouselSection data={carouselData} />
+        <NewsAndEvents />
         <Portfolio data={homeData && homeData[0]?.postersCollection?.items} />
         <ContactUs />
       </div>
