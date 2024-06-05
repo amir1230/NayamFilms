@@ -32,3 +32,16 @@ query {
 
 }
 `;
+export const NEWS_QUERY = `
+query {
+  newsCollection{
+    items{
+      newsCollection{
+        items{
+          url
+        }
+      }
+    }
+  }
+}
+`;

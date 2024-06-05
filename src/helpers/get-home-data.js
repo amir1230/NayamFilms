@@ -1,5 +1,9 @@
 import callContentful from "../service/client";
-import { HOME_QUERY, CAROUSEL_QUERY } from "../gqloperations/home-query";
+import {
+  HOME_QUERY,
+  CAROUSEL_QUERY,
+  NEWS_QUERY,
+} from "../gqloperations/home-query";
 export const getHomeData = async () => {
   try {
     const data = await callContentful({ query: HOME_QUERY });
@@ -22,6 +26,21 @@ export const getCarouselData = async () => {
         (a, b) => b.id - a.id
       );
       return temp;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    return [];
+  }
+};
+export const getNewsData = async () => {
+  try {
+    const data = await callContentful({ query: NEWS_QUERY });
+    console.log("This is news data back ", data);
+    if (
+      data?.data?.newsCollection?.items[0]?.newsCollection?.items?.length > 0
+    ) {
+      return data?.data?.newsCollection?.items[0]?.newsCollection?.items || [];
     } else {
       return [];
     }
