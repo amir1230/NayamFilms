@@ -1,5 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCarouselData, getHomeData } from "../helpers/get-home-data";
+import {
+  getCarouselData,
+  getHomeData,
+  getNewsData,
+} from "../helpers/get-home-data";
 
 export function useHomeData() {
   return useQuery({
@@ -7,7 +11,6 @@ export function useHomeData() {
     queryFn: async () => {
       try {
         const data = await getHomeData();
-        console.log("This is data ", data);
         return data;
       } catch (e) {
         console.log(e);
@@ -22,7 +25,21 @@ export function useCarouselData() {
     queryFn: async () => {
       try {
         const data = await getCarouselData();
-        console.log("This is data ", data);
+        return data;
+      } catch (e) {
+        console.log(e);
+        throw new Error("Invalid Error found");
+      }
+    },
+  });
+}
+export function useNewsData() {
+  return useQuery({
+    queryKey: ["news-data"],
+    queryFn: async () => {
+      try {
+        const data = await getNewsData();
+        console.log("This is news data ", data);
         return data;
       } catch (e) {
         console.log(e);

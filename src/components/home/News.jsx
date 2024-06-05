@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const NewsAndEvents = () => {
+const NewsAndEvents = ({ data }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-3 my-10">
       <Image
@@ -19,14 +19,22 @@ const NewsAndEvents = () => {
         behind-the-scenes insights as we embark on these thrilling cinematic
         endeavors.
       </p>
-      <div className="mt-5">
-        <Image
-          src="/assets/hero/poster.svg"
-          width={900}
-          height={900}
-          alt="poster"
-          className="object-cover"
-        />
+      <div className="mt-5 flex items-center gap-7 hide-scrollbar overflow-auto">
+        {data?.map((val) => {
+          return (
+            <Image
+              key={val.url}
+              src={val.url}
+              width={900}
+              height={900}
+              alt="poster"
+              className="object-cover"
+            />
+          );
+        })}
+        {data?.length <= 0 && (
+          <h1 className="text-center mt-14 text-gray-400">No Data Found</h1>
+        )}
       </div>
     </div>
   );
