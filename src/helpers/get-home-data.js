@@ -3,6 +3,7 @@ import { HOME_QUERY, CAROUSEL_QUERY } from "../gqloperations/home-query";
 export const getHomeData = async () => {
   try {
     const data = await callContentful({ query: HOME_QUERY });
+    console.log(data,"data")
     if (data.data.homeCollection.items?.length > 0) {
       const temp = data.data.homeCollection.items.sort((a, b) => b.id - a.id);
       return temp;
